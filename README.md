@@ -55,7 +55,7 @@ shifitng the equation, the chars need to be below `0x7e`, or `127`, which is the
 
 ![image](https://user-images.githubusercontent.com/7328587/165009732-dd2a9ea3-8650-4104-bda5-83364fa7ce08.png)
 
-chars 9 + char 10  >= 100
+chars 9 + char 8  >= 100
 
 ![image](https://user-images.githubusercontent.com/7328587/165009846-e4bf9701-0f12-4c86-b16c-0a5e8a0e05cc.png)
 
