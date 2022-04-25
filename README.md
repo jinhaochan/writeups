@@ -26,7 +26,7 @@ However, further down in the same block of code, we see that we need `bVar4` to 
 
 ![image](https://user-images.githubusercontent.com/7328587/165009055-4363296f-65f8-4072-8151-2ffa89a3d958.png)
 
-Instead, we try to find where it set `bVar4` to be `true`, which is found at the end of one of the code blocks
+Instead, we try to find where it sets `bVar4` to be `true`, which is found at the end of one of the code blocks
 
 ![image](https://user-images.githubusercontent.com/7328587/165009242-98b7d8ec-015e-4cc9-a479-4f6a26e43bd7.png)
 
