@@ -77,3 +77,26 @@ Through trial and error, setting it above `200h` prints out the entire flag
 ![image](https://user-images.githubusercontent.com/7328587/166860424-3ace71c9-1ecf-44e9-8c92-e5e44999d578.png)
 
 
+REV - Flatlands
+---
+
+The main parts of the code are
+
+Looping through your input and comparing each character with the string `NfTRcD1ontrw}4{mFl_Ad0ua`
+
+![image](https://user-images.githubusercontent.com/7328587/166860680-b4d98d0b-3063-4f38-a8c8-4f78d243b601.png)
+
+If the input character does not match the character in the string, this counter is incremented
+
+![image](https://user-images.githubusercontent.com/7328587/166860772-42a1d311-2f31-45c4-970e-a2e4c7a4b049.png)
+
+If the input character matches a character in the string, the counter is compared this value
+
+![image](https://user-images.githubusercontent.com/7328587/166860839-0263148b-90de-4d89-b5f0-31452348c73c.png)
+
+If the counter is equal, great. If the counter is not equal however, it does a second check with another value further down
+
+![image](https://user-images.githubusercontent.com/7328587/166861244-31ed4de1-f7f4-4c77-b591-d5eb990322ed.png)
+
+In summary, you have to reorder `NfTRcD1ontrw}4{mFl_Ad0ua` so that characters are at the right index, and the counter matches the values
+
