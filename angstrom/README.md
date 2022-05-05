@@ -40,3 +40,40 @@ print(flag)
 ```
 
 ![image](https://user-images.githubusercontent.com/7328587/166859554-23f689e5-78f8-44f6-afd5-914b35beff77.png)
+
+
+REV - Imposter
+---
+
+This program tries to allocate way too much memory. We just need to keep that in check and it will print the flag
+
+The two offending instructions are:
+
+![image](https://user-images.githubusercontent.com/7328587/166859905-e06bca50-9550-4932-828f-140a9a9e1b80.png)
+
+![image](https://user-images.githubusercontent.com/7328587/166859916-89bc490f-454d-461c-90b2-c3213585a83b.png)
+
+We reduce the malloc to a smaller size, and remove the `shl [rbp+size], 1]` to `shl rax, 0`, which essentially does nothing
+
+![image](https://user-images.githubusercontent.com/7328587/166860038-7187c8da-76f2-484a-8ab8-77ba5461046f.png)
+
+![image](https://user-images.githubusercontent.com/7328587/166860047-51030351-436e-453c-b28c-d95c9ef53f11.png)
+
+However, by doing that, we get a new error `realloc(): invalid next size`, which means that the amount of memory rellocated is too small for the new length of the string
+
+![image](https://user-images.githubusercontent.com/7328587/166860088-f336cc22-e22f-4878-8400-1959885e768f.png)
+
+
+So we push the numbers slightly higher to `100h` and we see that some strings are being printed out which roughly resembles the flag
+
+![image](https://user-images.githubusercontent.com/7328587/166860319-c31943ae-b7de-4785-adfd-7182fddce484.png)
+
+![image](https://user-images.githubusercontent.com/7328587/166860346-02bc7e7d-f65c-4f6a-b2c9-d02970f5554e.png)
+
+![image](https://user-images.githubusercontent.com/7328587/166860364-19ce0db1-c704-4819-958d-fd7d23a5117a.png)
+
+Through trial and error, setting it above `200h` prints out the entire flag
+
+![image](https://user-images.githubusercontent.com/7328587/166860424-3ace71c9-1ecf-44e9-8c92-e5e44999d578.png)
+
+
